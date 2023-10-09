@@ -7,7 +7,6 @@
 out
 /data
 .DS_Store
-
 ### Maven ###
 **/target
 **/src/main/**/target/
