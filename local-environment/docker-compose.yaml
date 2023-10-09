@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  axonserver-container:
+    image: axoniq/axonserver:latest
+    container_name: axonserver
+    restart: unless-stopped
+    environment:
+      AXONIQ_AXONSERVER_DEVMODE_ENABLED: "true"
+    ports:
+      - '8024:8024'
+      - '8124:8124'
+    volumes:
+      - ./volumes/axonserver/data:/axonserver/data
+      - ./volumes/axonserver/events:/axonserver/events
+      - ./volumes/axonserver/config:/axonserver/config
+    networks:
+      - springbankNet
+
+  mongodb-container:
+    image: mongo:latest
+    container_name: mongodb_data_container
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    networks:
+      - springbankNet
+
+networks:
+  springbankNet:
+    external: true
