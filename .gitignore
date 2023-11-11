@@ -14,3 +14,7 @@ out
 
 .mvn/settings-local*.xml
 **/src/main/resources/application-local-private*.yaml
+
+### Local environment ###
+local-environment/volumes/axonserver/events
+local-environment/volumes/axonserver/data
