@@ -34,7 +34,7 @@ public class RegisterUserController {
             return new ResponseEntity<>(new RegisterUserResponse(id, "User successfully registered"), HttpStatus.CREATED);
 
         } catch (Exception e) {
-            var safeErrorMessage = "Erro r while processing registered user request for id - " + id;
+            var safeErrorMessage = "Error while processing register user request for id - " + id;
             System.out.println(e.toString());
 
             return new ResponseEntity<>(new RegisterUserResponse(id, safeErrorMessage), HttpStatus.INTERNAL_SERVER_ERROR);
