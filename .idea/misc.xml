@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/user.oauth2.0/pom.xml" />
         <option value="$PROJECT_DIR$/../api-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/bank-account/bankacc.core/pom.xml" />
       </list>
     </option>
   </component>
