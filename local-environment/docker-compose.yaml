@@ -42,7 +42,7 @@ services:
 
   adminer-container:
     image: adminer:latest
-    container_name: user-management-mongodb
+    container_name: adminer
     restart: no
     ports:
       - '8080:8080'

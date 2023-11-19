@@ -18,3 +18,5 @@ out
 ### Local environment ###
 local-environment/volumes/axonserver/events
 local-environment/volumes/axonserver/data
+
+local-environment/volumes/mysql_data_container
