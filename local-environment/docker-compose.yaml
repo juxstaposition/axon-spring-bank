@@ -27,6 +27,30 @@ services:
     networks:
       - springbankNet
 
+  mysql-container:
+    image: mysql:latest
+    container_name: spring-bank-mysql
+    restart: no
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./volumes/mysql_data_container:/var/lib/mysql
+    networks:
+      - springbankNet
+    environment:
+      MYSQL_ROOT_PASSWORD: "springbankRootPsw"
+
+  adminer-container:
+    image: adminer:latest
+    container_name: user-management-mongodb
+    restart: no
+    ports:
+      - '8080:8080'
+    networks:
+      - springbankNet
+    environment:
+      ADMINER_DEFAULT_SERVER: "mysql-container"
+
 networks:
   springbankNet:
     external: true
